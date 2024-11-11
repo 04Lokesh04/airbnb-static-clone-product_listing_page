@@ -1,0 +1,421 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Cereal', sans-serif;
+    line-height: 1.5;
+}
+
+
+
+.nav-image{
+    height: 85px;
+    width: 150px;
+    position: center;
+}
+
+.nav-text{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navbar{
+    background-color: #fff;
+
+}
+
+.main{
+    margin-top: 150px;
+}
+
+.form-card{
+    background-color: #fff;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    height: auto;
+    transform: translateX(30%);
+    z-index: 3;
+    
+}
+
+.form-card2{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    
+}
+.form-heading{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.form-para{
+    font-size: 15px;
+    color: grey;
+}
+
+.form-box{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 10px;
+
+}
+
+.loacation-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.loaction-para{
+    font-size: 18px;
+    color: grey;
+}
+
+.image-container{
+    position: relative;
+    height: 100%;
+}
+
+.header-image{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+.form-container{
+    position: relative;
+    
+}
+
+.form-line{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.icon{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.textinimage{
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 5px;
+    position: absolute;
+}
+
+
+.textinimage2{
+    background-color: #645555;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 5px;
+    position: absolute;
+    color: #fff;
+}
+
+.custom-heading{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.custom-para{
+    font-size: 15px;
+    color: grey;
+}
+
+.custom-slide{
+    padding: 10px;
+}
+.custom-slide:nth-child(1) .imageandtext{
+    background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-39049869/original/d05ca6dd-95ee-4d09-b347-3c9c9ca30cb5.jpeg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.custom-slide:nth-child(2) .imageandtext{
+    background-image: url('https://a0.muscache.com/im/pictures/5e72bffc-a60b-4137-a6d4-85226ad9e61e.jpg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.custom-slide:nth-child(3) .imageandtext{
+    background-image: url('https://a0.muscache.com/im/pictures/02a5f73e-9aa9-4eaa-acfa-6157327d7be3.jpg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.custom-slide:nth-child(4) .imageandtext{
+    background-image: url('https://a0.muscache.com/im/pictures/5a024f99-252d-450d-a92b-77ca7f762f96.jpg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.carousel-item{
+    width: 100%;
+}
+
+
+.small-screen-carousel{
+    overflow-x: scroll;
+    margin-top: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.small-screen-carousel::-webkit-scrollbar{
+    display: none;
+
+}
+
+.small-card{
+    margin-right: 20px;
+    scroll-snap-align: start;
+ 
+}
+
+.imagetextsmall1{
+    background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-39049869/original/d05ca6dd-95ee-4d09-b347-3c9c9ca30cb5.jpeg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.imagetextsmall2{
+    background-image: url('https://a0.muscache.com/im/pictures/5e72bffc-a60b-4137-a6d4-85226ad9e61e.jpg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.imagetextsmall3{
+    background-image: url('https://a0.muscache.com/im/pictures/02a5f73e-9aa9-4eaa-acfa-6157327d7be3.jpg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.imagetextsmall4{
+    background-image: url('https://a0.muscache.com/im/pictures/5a024f99-252d-450d-a92b-77ca7f762f96.jpg?im_w=720');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.holidayimage1{
+    background-image: url('https://a0.muscache.com/im/pictures/5b2a5847-eae1-432e-bbf2-be13a9941c16.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.holidayimage2{
+    background-image: url('https://a0.muscache.com/im/pictures/SeoLandingPage/PropertyType/original/1e465805-b4b5-49ab-8604-b5e8bec72fee.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.holidayimage3{
+    background-image: url('https://a0.muscache.com/im/pictures/3b638d62-baa9-4bea-ba33-58c5ca4bbccb.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.amenitiescard{
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.amenities-icon{
+    font-size: 30px;
+}
+
+.greatholidaycard{
+    padding: 10px;
+}
+
+.greatholidayimg1{
+    background-image: url('https://a0.muscache.com/im/pictures/3b638d62-baa9-4bea-ba33-58c5ca4bbccb.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.greatholidayimg2{
+    background-image: url('https://a0.muscache.com/im/pictures/e0f49170-d954-402a-8002-1e8b1cb0885d.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.greatholidayimg3{
+    background-image: url('https://a0.muscache.com/im/pictures/0db6e660-2c2f-44d4-b3ae-56bcc7e0e02d.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.greatholidayimg4{
+    background-image: url('https://a0.muscache.com/im/pictures/b1989b40-f958-4d8b-a557-3feb3eb7ca3f.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.greatholidayimg5{
+    background-image: url('https://a0.muscache.com/im/pictures/miso/Hosting-997828649510525029/original/d63b9afd-eb6c-4c91-b2ba-153b00fe39ea.jpeg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.greatholidayimg6{
+    background-image: url('https://a0.muscache.com/im/pictures/47072f6d-8e78-4ebc-b32c-04526ad40798.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.greatholidayimg7{
+    background-image: url('https://a0.muscache.com/im/pictures/76121bf4-34bf-49d9-9467-23d46a0d483e.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+.greatholidayimg8{
+    background-image: url('https://a0.muscache.com/im/pictures/40a8abf3-d867-40da-b0bf-612b7b78b062.jpg?im_w=480');
+    height: 275px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.arrow{
+    font-size: 20px;
+}
+
+.explore-para{
+    font-size: 15px;
+    color: #000;
+    text-decoration: underline;
+}
+
+.explorecard{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.exploreheading{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.explorepara2{
+    font-size: 12px;
+    font-weight: 300;
+    color: grey;
+}
+
+.last-para{
+    font-size: 15px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.last-para1{
+    font-size: 15px;
+    color: #000;
+    margin-left: 10px;
+}
+
+.footerpara{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.footer-icon{
+    font-size: 15px;
+    margin-right: 20px;
+}

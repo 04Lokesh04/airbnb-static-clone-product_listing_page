@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="icon" href="data:image/png;base64,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" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar  border-bottom navbar-dark d-flex justify-content-between align-items-center">
+                    <img class="nav-image" src="https://cdn.freelogovectors.net/wp-content/uploads/2023/05/airbnb-logo-freelogovectors.net_.png" alt="logo" />
+                    <p class="nav-text mt-4">Airbnb Your place</p>
+                </nav>
+            </div>
+        </div> 
+      <div class="row my-5">
+
+            <div class="col-md-4 order-1 order-md-0  d-flex flex-column justify-content-center align-items-center form-container ">
+                <form class="form-card d-none d-md-inline  d-flex flex-column shadow-lg">
+                    <h1 class="form-heading mb-2">Holiday rentals in India</h1>
+                    <p class="form-para mb-2">Find and book unique accommodation on Airbnb</p>
+                    <div class="form-box d-flex flex-column p-2 justify-content-center mb-2">
+                        <h1 class="loacation-heading">Locations</h1>
+                        <p class="loaction-para">Anywhere</p>
+                    </div>
+                    <div class="form-box mb-2 d-flex justify-content-between p-2">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h1 class="loacation-heading">Locations</h1>
+                            <p class="loaction-para">Anywhere</p>
+                        </div>
+                        <p class="form-line">|</p>
+                        <div class="d-flex flex-column justify-content-center ">
+                            <h1 class="loacation-heading">Locations</h1>
+                            <p class="loaction-para">Anywhere</p>
+                        </div>
+                    </div>
+                    <button class="w-100 form-button btn btn-danger"><i class="bi bi-search icon"></i> Search</button>
+                </form>
+                <form class="form-card2 d-md-none  d-flex flex-column shadow-lg">
+                    <h1 class="form-heading mb-2">Holiday rentals in India</h1>
+                    <p class="form-para mb-2">Find and book unique accommodation on Airbnb</p>
+                    <div class="form-box d-flex flex-column p-2 justify-content-center mb-2">
+                        <h1 class="loacation-heading">Locations</h1>
+                        <p class="loaction-para">Anywhere</p>
+                    </div>
+                    <div class="form-box mb-2 d-flex justify-content-between p-2">
+                        <div class="d-flex flex-column justify-content-center">
+                            <h1 class="loacation-heading">Locations</h1>
+                            <p class="loaction-para">Anywhere</p>
+                        </div>
+                        <p class="form-line">|</p>
+                        <div class="d-flex flex-column justify-content-center ">
+                            <h1 class="loacation-heading">Locations</h1>
+                            <p class="loaction-para">Anywhere</p>
+                        </div>
+                    </div>
+                    <button class="form-button btn btn-danger"><i class="bi bi-search icon"></i> Search</button>
+                </form>
+            </div>
+            <div  class=" col-md-8 image-container">
+                <img class="header-image" src="https://a0.muscache.com/im/pictures/d6ce61b5-87e5-4f45-b54d-42f2f7ef9a55.jpg?im_w=1440" alt="hotel-image"/>
+            </div>
+      </div> 
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <h1 class="form-heading">Top-rated holiday rentals in India
+                </h1>
+                <p class="form-para">
+                    Guests agree: these stays are highly rated for location, cleanliness and more.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <!--Large screen carousel-->
+            <div class="col-12 d-none d-lg-block">
+                <div id="carousel-lg" class="carousel slide col-12 ">
+                    <div class="carousel-inner col-12">
+                      <div class="carousel-item col-12 active">
+                        <div class="d-flex justify-content-between">
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Treehouse in Kottathara.. <i class="bi bi-star-fill star-icon"></i> 4.97 (236)</h1>
+                                <p class="custom-para">Duplex Riverside Treehouse- RiverTree FarmStay
+                                    Welcome to our simple living concept with nature and farm life style. Our duplex treehouse is a tiny house build at 35feet height,...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Tiny home in Ram <i class="bi bi-star-fill star-icon"></i> 4.9 (135)</h1>
+                                <p class="custom-para">Calm & Secluded Cottage w/ Spectacular River-view
+        
+                                    Listed as most gorgeous River view Villa by Cosmopolitan ®India. Jhula River Villa : A calm river by the balcony, a beautiful sunset, a...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage2">Superhost</span>
+                                </div>
+                                <h1 class="custom-heading">Holiday home in <i class="bi bi-star-fill star-icon"></i> 4.95 (129)</h1>
+                                <p class="custom-para">Little Chembaka- Private Villa with River View
+        
+                                    We're all about bringing you closer to local life and creating unforgettable memories. Our villa has a cosy bedroom, shared dini...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Farm stay in Kott... <i class="bi bi-star-fill star-icon"></i> 4.91 (163)</h1>
+                                <p class="custom-para">Naturesque Independent Farm Villa Exclusive to You
+        
+                                    Johny Moose Backwater Farm is located on the banks of the meenachil river within the limits of Aymanam village made famous b...</p>
+                            </div>
+                        </div>
+                        
+                      </div>
+                      <div class="carousel-item col-12 ">
+                        <div class="d-flex">
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Treehouse in Kottathara.. <i class="bi bi-star-fill star-icon"></i> 4.97 (236)</h1>
+                                <p class="custom-para">Duplex Riverside Treehouse- RiverTree FarmStay
+                                    Welcome to our simple living concept with nature and farm life style. Our duplex treehouse is a tiny house build at 35feet height,...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Tiny home in Ram <i class="bi bi-star-fill star-icon"></i> 4.9 (135)</h1>
+                                <p class="custom-para">Calm & Secluded Cottage w/ Spectacular River-view
+        
+                                    Listed as most gorgeous River view Villa by Cosmopolitan ®India. Jhula River Villa : A calm river by the balcony, a beautiful sunset, a...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage2">Superhost</span>
+                                </div>
+                                <h1 class="custom-heading">Holiday home in <i class="bi bi-star-fill star-icon"></i> 4.95 (129)</h1>
+                                <p class="custom-para">Little Chembaka- Private Villa with River View
+        
+                                    We're all about bringing you closer to local life and creating unforgettable memories. Our villa has a cosy bedroom, shared dini...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Farm stay in Kott... <i class="bi bi-star-fill star-icon"></i> 4.91 (163)</h1>
+                                <p class="custom-para">Naturesque Independent Farm Villa Exclusive to You
+        
+                                    Johny Moose Backwater Farm is located on the banks of the meenachil river within the limits of Aymanam village made famous b...</p>
+                            </div>
+                        </div>
+                        
+                      </div>
+                      <div class="carousel-item col-12">
+                        <div class="d-flex">
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Treehouse in Kottathara.. <i class="bi bi-star-fill star-icon"></i> 4.97 (236)</h1>
+                                <p class="custom-para">Duplex Riverside Treehouse- RiverTree FarmStay
+                                    Welcome to our simple living concept with nature and farm life style. Our duplex treehouse is a tiny house build at 35feet height,...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Tiny home in Ram <i class="bi bi-star-fill star-icon"></i> 4.9 (135)</h1>
+                                <p class="custom-para">Calm & Secluded Cottage w/ Spectacular River-view
+        
+                                    Listed as most gorgeous River view Villa by Cosmopolitan ®India. Jhula River Villa : A calm river by the balcony, a beautiful sunset, a...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage2">Superhost</span>
+                                </div>
+                                <h1 class="custom-heading">Holiday home in <i class="bi bi-star-fill star-icon"></i> 4.95 (129)</h1>
+                                <p class="custom-para">Little Chembaka- Private Villa with River View
+        
+                                    We're all about bringing you closer to local life and creating unforgettable memories. Our villa has a cosy bedroom, shared dini...</p>
+                            </div>
+                            <div class="custom-slide col-3">
+                                <div class="imageandtext">
+                                    <span class="textinimage">Guest favourite</span>
+                                </div>
+                                <h1 class="custom-heading">Farm stay in Kott... <i class="bi bi-star-fill star-icon"></i> 4.91 (163)</h1>
+                                <p class="custom-para">Naturesque Independent Farm Villa Exclusive to You
+        
+                                    Johny Moose Backwater Farm is located on the banks of the meenachil river within the limits of Aymanam village made famous b...</p>
+                            </div>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-lg" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-lg" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!--small screen carousel-->
+            <div class="col-12 d-md-none ">
+                <div class="col-12 small-screen-carousel d-flex ">
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall1">
+                            <span class="textinimage">Guest favourite</span>
+                        </div>
+                        <h1 class="custom-heading">Treehouse in Kottathara.. <i class="bi bi-star-fill star-icon"></i> 4.97 (236)</h1>
+                        <p class="custom-para">Duplex Riverside Treehouse- RiverTree FarmStay
+                            Welcome to our simple living concept with nature and farm life style. Our duplex treehouse is a tiny house build at 35feet height,...</p>
+                    </div>
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall2">
+                            <span class="textinimage">Guest favourite</span>
+                        </div>
+                        <h1 class="custom-heading">Tiny home in Ram <i class="bi bi-star-fill star-icon"></i> 4.9 (135)</h1>
+                        <p class="custom-para">Calm & Secluded Cottage w/ Spectacular River-view
+
+                            Listed as most gorgeous River view Villa by Cosmopolitan ®India. Jhula River Villa : A calm river by the balcony, a beautiful sunset, a...</p>
+                    </div>
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall3">
+                            <span class="textinimage">Guest favourite</span>
+                        </div>
+                        <h1 class="custom-heading">Treehouse in Kottathara.. <i class="bi bi-star-fill star-icon"></i> 4.97 (236)</h1>
+                        <p class="custom-para">Duplex Riverside Treehouse- RiverTree FarmStay
+                            Welcome to our simple living concept with nature and farm life style. Our duplex treehouse is a tiny house build at 35feet height,...</p>
+                    </div>
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall4">
+                            <span class="textinimage">Guest favourite</span>
+                        </div>
+                        <h1 class="custom-heading">Tiny home in Ram <i class="bi bi-star-fill star-icon"></i> 4.9 (135)</h1>
+                        <p class="custom-para">Calm & Secluded Cottage w/ Spectacular River-view
+
+                            Listed as most gorgeous River view Villa by Cosmopolitan ®India. Jhula River Villa : A calm river by the balcony, a beautiful sunset, a...</p>
+                    </div>
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall1">
+                            <span class="textinimage">Guest favourite</span>
+                        </div>
+                        <h1 class="custom-heading">Treehouse in Kottathara.. <i class="bi bi-star-fill star-icon"></i> 4.97 (236)</h1>
+                        <p class="custom-para">Duplex Riverside Treehouse- RiverTree FarmStay
+                            Welcome to our simple living concept with nature and farm life style. Our duplex treehouse is a tiny house build at 35feet height,...</p>
+                    </div>
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall2">
+                            <span class="textinimage">Guest favourite</span>
+                        </div>
+                        <h1 class="custom-heading">Tiny home in Ram <i class="bi bi-star-fill star-icon"></i> 4.9 (135)</h1>
+                        <p class="custom-para">Calm & Secluded Cottage w/ Spectacular River-view
+
+                            Listed as most gorgeous River view Villa by Cosmopolitan ®India. Jhula River Villa : A calm river by the balcony, a beautiful sunset, a...</p>
+                    </div>
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall3">
+                            <span class="textinimage2">Superhost</span>
+                        </div>
+                        <h1 class="custom-heading">Holiday home in <i class="bi bi-star-fill star-icon"></i> 4.95 (129)</h1>
+                        <p class="custom-para">Little Chembaka- Private Villa with River View
+
+                            We're all about bringing you closer to local life and creating unforgettable memories. Our villa has a cosy bedroom, shared dini...</p>
+                    </div>
+                    <div class="small-card col-10">
+                        <div class="imagetextsmall4">
+                            <span class="textinimage">Guest favourite</span>
+                        </div>
+                        <h1 class="custom-heading">Farm stay in Kott... <i class="bi bi-star-fill star-icon"></i> 4.91 (163)</h1>
+                        <p class="custom-para">Naturesque Independent Farm Villa Exclusive to You
+
+                            Johny Moose Backwater Farm is located on the banks of the meenachil river within the limits of Aymanam village made famous b...</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <h1 class="form-heading">Holiday rentals for every style</h1>
+            <p class="form-para">Get the amount of space that is right for you</p>
+        </div>
+        <div class="col-12 ">
+            <div class="col-12 small-screen-carousel d-flex ">
+                <div class="small-card col-10 col-md-3">
+                    <div class="holidayimage1">
+                    </div>
+                    <h1 class="custom-heading">Cottages</h1>
+                    <p class="custom-para">Quaint homes, peaceful surroundings</p>
+                </div>
+                <div class="small-card col-10 col-md-3">
+                    <div class="holidayimage2">
+                    </div>
+                    <h1 class="custom-heading">Cabins</h1>
+                    <p class="custom-para">Kick off your hiking boots at these rustic lodgings</p>
+                </div>
+                <div class="small-card col-10 col-md-3">
+                    <div class="holidayimage3">
+                    </div>
+                    <h1 class="custom-heading">Flats</h1>
+                    <p class="custom-para">Convenient locations with everyday essentials</p>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <h1 class="form-heading">Popular amenities for India holiday rentals</h1>
+        
+        </div>
+        <div class="col-12 ">
+            <div class="col-12 small-screen-carousel d-flex ">
+                <div class="small-card p-3 col-6 col-md-2">
+                    <div class="amenitiescard d-flex flex-column ">
+                        <i class="bi bi-cookie amenities-icon"></i>
+                        <h1 class="custom-heading">Kitchen</h1>
+                    </div>
+                    
+                </div>
+                <div class="small-card p-3 col-6 col-md-2">
+                    <div class="amenitiescard d-flex flex-column ">
+                        <i class="bi bi-wifi amenities-icon"></i>
+                        <h1 class="custom-heading">WiFi</h1>
+                    </div>
+                    
+                </div>
+                <div class="small-card p-3 col-6 col-md-2">
+                    <div class="amenitiescard d-flex flex-column ">
+                        <i class="bi bi-water amenities-icon"></i>
+                        <h1 class="custom-heading">Pool</h1>
+                    </div>
+                    
+                </div>
+                <div class="small-card p-3 col-6 col-md-2">
+                    <div class="amenitiescard d-flex flex-column ">
+                        <i class="bi bi-p-circle amenities-icon"></i>
+                        <h1 class="custom-heading">Free parking on premises</h1>
+                    </div>
+                    
+                </div>
+                <div class="small-card p-3 col-6 col-md-2">
+                    <div class="amenitiescard d-flex flex-column ">
+                        <i class="bi bi-fan amenities-icon"></i>
+                        <h1 class="custom-heading">Air Conditioner</h1>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container mt-5">
+
+        <h1 class="form-heading mb-4">Other great holiday rentals in India</h1>
+        <div class="row">
+            <div class="col-12 d-flex flex-row flex-wrap">
+                <div class="greatholidaycard mb-3 col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg1">
+                        <span class="textinimage2">superhost</span>
+                    </div>
+                    <h1 class="custom-heading">Home in Padinjarathara.. <i class="bi bi-star-fill star-icon"></i> 4.9 (42)</h1>
+                    <p class="custom-para">Nammal - a friendship nest</p>
+                </div>
+                <div class="greatholidaycard mb-3 col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg2">
+                        <span class="textinimage">Guest favourite</span>
+                    </div>
+                    <h1 class="custom-heading">Villa in Dehradun <i class="bi bi-star-fill star-icon"></i> 5 (58)</h1>
+                    <p class="custom-para">Lal Kothi, Mountain Wrapped home w/Mughla...</p>
+                </div>
+                <div class="greatholidaycard mb-3 col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg3">
+                        <span class="textinimage2">Superhost</span>
+                    </div>
+                    <h1 class="custom-heading">Villa in Chennai <i class="bi bi-star-fill star-icon"></i> 4.81 (26)</h1>
+                    <p class="custom-para">Villa Waves - Bali Beach Villa on ECR near...</p>
+                </div>
+                <div class="greatholidaycard mb-3 col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg4">
+                        <span class="textinimage">Guest favourite</span>
+                    </div>
+                    <h1 class="custom-heading">Home in Kohka <i class="bi bi-star-fill star-icon"></i> 5 (18)</h1>
+                    <p class="custom-para">Palash Villa -Stay with Naturalist</p>
+                </div>
+                <div class="greatholidaycard mb-3 col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg5">
+                        <span class="textinimage">Guest favourite</span>
+                    </div>
+                    <h1 class="custom-heading">Villa in Ithalar <i class="bi bi-star-fill star-icon"></i> 4.97 (34)</h1>
+                    <p class="custom-para">Villa Camellia Balacola, Ooty</p>
+                </div>
+                <div class="greatholidaycard mb-3 col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg6">
+                        <span class="textinimage2">Superhost</span>
+                    </div>
+                    <h1 class="custom-heading">Villa in Erankulam <i class="bi bi-star-fill star-icon"></i> 5 (6)</h1>
+                    <p class="custom-para">Chittoor Kottaram - Royal Sanctuary on...</p>
+                </div>
+                <div class="greatholidaycard mb-3 col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg7">
+                        <span class="textinimage">Guest favourite</span>
+                    </div>
+                    <h1 class="custom-heading">Villa in Mumbai <i class="bi bi-star-fill star-icon"></i> 4.97 (31)</h1>
+                    <p class="custom-para">Bougainvilla.. The perfect Getaway in Paradise</p>
+                </div>
+                <div class="greatholidaycard col-md-3 col-sm-6 col-12">
+                    <div class="greatholidayimg8">
+                        <span class="textinimage">Guest favourite</span>
+                    </div>
+                    <h1 class="custom-heading">Castle in Jaisalmer <i class="bi bi-star-fill star-icon"></i> 4.89 (76)</h1>
+                    <p class="custom-para">500 years old Haveli for stay with private</p>
+                </div>
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                    <button class=" arrow col-12 btn btn-outline-dark">Show all <i class="bi bi-arrow-right"></i> </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="form-heading">Destinations to explore</h1>
+                <div class="d-flex ">
+                    <p class="explore-para me-4">Other types of stays</p>
+                    <p class="form-para me-4">Unique stays</p>
+                    <p class="form-para">Things to do</p>
+                </div>
+                <hr class="form-line mt-4 mb-4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-6 ">
+                <div class="explorecard">
+                    <h1 class="exploreheading">Waterfront rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Treehouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Loft rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cottage rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Tiny house rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cabin rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Bed and breakfasts</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Hotel rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Townhouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Farm stay rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="explorecard">
+                    <h1 class="exploreheading">Waterfront rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Treehouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Loft rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cottage rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Tiny house rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cabin rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Bed and breakfasts</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Hotel rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Townhouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Farm stay rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="explorecard">
+                    <h1 class="exploreheading">Waterfront rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Treehouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Loft rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cottage rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Tiny house rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cabin rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Bed and breakfasts</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Hotel rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Townhouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Farm stay rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="explorecard">
+                    <h1 class="exploreheading">Waterfront rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Treehouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Loft rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cottage rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Tiny house rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cabin rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Bed and breakfasts</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Hotel rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Townhouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Farm stay rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="explorecard">
+                    <h1 class="exploreheading">Waterfront rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Treehouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Loft rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cottage rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Tiny house rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cabin rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Bed and breakfasts</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Hotel rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Townhouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Farm stay rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-6">
+                <div class="explorecard">
+                    <h1 class="exploreheading">Waterfront rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Treehouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Loft rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cottage rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Tiny house rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Cabin rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Bed and breakfasts</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Hotel rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Townhouse rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+                <div class="explorecard">
+                    <h1 class="exploreheading">Farm stay rentals</h1>
+                    <p class="explore-para2">India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex">
+                    <p class="last-para">Airbnb </p>
+                    <p class="last-para1">></p>
+                    <p class="last-para1">India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="form-line mt-5 mb-5">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between align-items-center mb-5">
+                <div class="textcard d-flex flex-row  w-70 mt-3">
+                    <p class="footerpara">© 2024 Airbnb, Inc.</p>
+                    
+                    <p class="footerpara">Privacy</p>
+                    
+                    <p class="footerpara">Terms</p>
+                    
+                    <p class="footerpara">Site Map</p>
+                </div>
+
+                <div class="iconscard d-flex flex-row">
+                    <i class="bi bi-facebook footer-icon"></i>
+                    <i class="bi bi-twitter footer-icon"></i>
+                    <i class="bi bi-instagram footer-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
